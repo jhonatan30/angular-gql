@@ -1,0 +1,9 @@
+<div *ngFor="let user of users | async">
+    <div class="card" style="margin-top: 15px">
+        <div class="card-body">
+            <h5 class="card-title"> {{ user.id }} </h5>
+            <h6 class="card-subtitle mb-2 text-muted"> {{ user.title }} </h6>
+            <p class="card-text"> {{ user.body }}</p>
+        </div>
+    </div>
+</div>
