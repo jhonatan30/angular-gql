@@ -2,6 +2,7 @@ import gql from 'graphql-tag';
 import { Apollo } from 'apollo-angular';
 import { Component, OnInit } from '@angular/core';
 import { map } from 'rxjs/operators';
+import { newUserConverter } from 'src/app/decorators/new-user-converter';
 import { Observable } from 'rxjs';
 import { Query, User } from 'src/app/types/types';
 
@@ -11,6 +12,9 @@ import { Query, User } from 'src/app/types/types';
   styleUrls: ['./users-list.component.scss']
 })
 export class UsersListComponent implements OnInit {
+
+  @newUserConverter
+  isNew: boolean = true;
 
   users: Observable<User[]>;
 
@@ -24,6 +28,7 @@ export class UsersListComponent implements OnInit {
           allUsers {
             userId
             id
+            isNew
             title
             body
           }
