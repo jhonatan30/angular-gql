@@ -1,11 +1,16 @@
 export type User = {
-    userId: number;
     id: number;
-    isNew: boolean;
-    title: string;
-    body: string;
+    name: string;
+    profile: string;
+};
+
+export type Tweet = {
+    id: number;
+    userId: number;
+    tweet: string;
 };
 
 export type Query = {
-    allUsers: User[]
+    users: [User];
+    tweets: [Tweet];
 };

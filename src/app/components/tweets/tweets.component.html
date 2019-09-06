@@ -1,4 +1,19 @@
-<div cdkDropList [cdkDropListData]="users" [cdkDropListConnectedTo]="secondList" #firstList="cdkDropList"
+<div class="container">
+    <button class="btn btn-info"> Generate random tweet </button>
+
+    <div class="card" *ngFor="let tweet of tweets">
+        <div class="card-header">
+            <h4 class="card-title">
+                {{ tweet.id }}
+            </h4>
+        </div>
+        <div class="card-body">
+            {{ tweet.tweet }}
+        </div>
+    </div>
+</div>
+
+<!-- <div cdkDropList [cdkDropListData]="users" [cdkDropListConnectedTo]="secondList" #firstList="cdkDropList"
     (cdkDropListDropped)="drop($event)" class="list-container">
     <div *ngFor="let user of users" cdkDrag>
         <div class="card" style="margin-top: 15px">
@@ -24,4 +39,4 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->

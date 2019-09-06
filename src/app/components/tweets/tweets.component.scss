@@ -2,8 +2,13 @@
 
     display: flex;
 
-    .card-body {
-        min-height: 225px;
+    button {
+        margin: 25px auto;
+        display: block;
+    }
+
+    .card {
+        margin-bottom: 5px;
     }
 
     .list-container {
